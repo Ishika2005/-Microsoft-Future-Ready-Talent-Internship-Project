@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<title> Weight Loss | Home </title>
+
+	
+		<!-- Web Fonts -->
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin">
+
+		<!-- CSS Global Compulsory -->
+		<link rel="stylesheet" href="CSS/bootstrap.min.css">
+		<link rel="stylesheet" href="CSS/style.css">
+
+		<!-- CSS Header and Footer -->
+		<link rel="stylesheet" href="CSS/header.css">
+		<link rel="stylesheet" href="CSS/footer.css">
+
+		<!-- CSS Implementing Plugins -->
+		<link rel="stylesheet" href="CSS/styles1.css">
+		<link rel="stylesheet" href="CSS/line-icons.css">
+		<link rel="stylesheet" href="CSS/font-awesome.min.css">
+
+		<!-- CSS Customization -->
+		<link rel="stylesheet" href="CSS/custom.css">
+		
+
+</head>
+
+<body>
+	<div class="wrapper">
+	<!--=== Header v1 ===-->
+	<div class="header-v1">
+	<!-- Topbar -->
+	<div class="topbar-v1">
+	<div class="container">
+	<div class="row">
+	<div class="col-md-6">
+			<ul class="list-inline top-v1-contacts">
+			<li>
+			<i class="fa fa-envelope"></i> Email: weigthloss@gmail.com
+			</li>
+			<li>
+			<i class="fa fa-phone"></i> Contact no : 0009981010
+			</li>
+			</ul>
+</div>
+</div>
+</div>
+</div>
+
+<!-- End Topbar -->
+
+				<!-- Navbar -->
+				<div class="navbar mega-menu" role="navigation">
+				<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="res-container">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+
+				<div class="navbar-brand">
+				<a href="index.html">
+				<img src="img/unity_white.jpg" alt="Logo"  style="width:100%"  height="100">
+				</a>
+				</div>
+				</div><!--/end responsive container-->
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse navbar-responsive-collapse">
+				<div class="res-container">
+				<ul class="nav navbar-nav">
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+
+
+				<!-- Home  -->
+				<li class="mega-menu-fullwidth">
+				<a href="index.html" >
+				HOME
+				</a>
+
+				</li>
+				<!-- End Home-->
+
+				<!-- About Us -->
+				<li class="mega-menu-fullwidth">
+				<a href="about.html" >
+				ABOUT US
+				</a>	
+				</li>
+				<!-- End About us -->
+
+				
+				<!-- End Doctors -->
+
+
+				<!-- Gallery -->
+				<li class="mega-menu-fullwidth">
+				<a href="gallery.html" >
+				GALLERY
+				</a>
+
+				</li>
+				<!-- End Gallery -->
+
+
+				<!-- Blog -->
+				
+				<!-- End Blog -->
+
+				<!-- Contact Us -->
+				<li class="mega-menu-fullwidth">
+				<a href="contact.html" >
+				CONTACT US
+				</a>	
+				</li>
+				<!-- End Contact us -->
+
+				
+				<!-- End registration -->
+
+				<!-- login -->
+				<li class="mega-menu-fullwidth">
+				<a href="login.html" >
+				LOGIN
+				</a>	
+				</li>
+				<!-- End login -->
+
+				
+				<!-- End Appointment -->
+
+				</ul>
+
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<!-- End Navbar -->
+
+
+
+			<!-- Slider -->
+			<div id="slide">
+			<div class="slideshow-container">
+			<div class="mySlides fade"> <img src="img/11.jpg" alt="Slider1" style="width:50%"> </div>
+			<div class="mySlides fade"> <img src="img/12.jpg" alt="Slider2" style="width:50%"> </div>
+			<div class="mySlides fade"> <img src="img/13.jpg" alt="Slider3" style="width:50%"> </div>
+			<div class="mySlides fade"> <img src="img/14.jpg" alt="Slider3" style="width:50%"> </div>
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a> <a class="next" onclick="plusSlides(1)">&#10095;</a> 
+			</div>
+			<br>
+			<div style="text-align:center"> 
+			<span class="dot" onclick="currentSlide(1)"></span> 
+			<span class="dot" onclick="currentSlide(2)"></span> 
+			<span class="dot" onclick="currentSlide(3)"></span>
+			<span class="dot" onclick="currentSlide(4)"></span>
+			</div>
+			</div>
+
+			<script>
+			var slideIndex = 0;
+			showSlides();
+			var slides,dots;
+
+			function showSlides() {
+			var i;
+			slides = document.getElementsByClassName("mySlides");
+			dots = document.getElementsByClassName("dot");
+			for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";  
+			}
+			slideIndex++;
+			if (slideIndex> slides.length) {slideIndex = 1}    
+			for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideIndex-1].style.display = "block";  
+			dots[slideIndex-1].className += " active";
+			setTimeout(showSlides, 8000); // Change image every 8 seconds
+			}
+
+			function plusSlides(position) {
+			slideIndex +=position;
+			if (slideIndex> slides.length) {slideIndex = 1}
+			else if(slideIndex<1){slideIndex = slides.length}
+			for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";  
+			}
+			for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideIndex-1].style.display = "block";  
+			dots[slideIndex-1].className += " active";
+			}
+
+			function currentSlide(index) {
+			if (index> slides.length) {index = 1}
+			else if(index<1){index = slides.length}
+			for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";  
+			}
+			for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[index-1].style.display = "block";  
+			dots[index-1].className += " active";
+			}
+			</script>
+
+
+			<!-- End of Slider -->
+			
+
+		<!--=== Welcome to Unity===-->
+		<div class="container content-md welcomeSection">
+		<div class="row section1">
+			<div class="bot">
+				<p>
+					  AZURE HEALTH BOT
+				</p>
+			</div>
+		<div class="col-md-6" style="margin-bottom: 40px;" style="border:2px solid black background: green;">
+			<h2 class="title-v2">WELCOME TO <span style="color: #72c02c;"> Weigth Loss with the help of azure  bot </span></h2>
+			<p style="text-align: justify; font-size: 14px;">This Azure wiegth Loss bot is designed to give an advisor to support you to choose the right exercise, share tips as well as give you healthy diet recommendations to help you get in shape faster.
+
+				Treat yourself better by using "Health & Weight Loss AZURE  Chatbot".</p>
+			<p style="text-align: justify; font-size: 14px;">Here you can compare the nutrition content of foods side by side. You can see how your daily food intake and activity compare to government recommendations.
+				Azure health bot will help you to lose weight faster and easier than you ever could by yourself.</p> 
+			<p style="text-align: justify; font-size: 14px;">Everyday is a battle, and you have to make the choice each morning to fight for your health and wellness.Track every single bite you take. You need to know how you’re doing before dinner. </p> <br>
+			<a href="about.html" class="btn-u btn-brd btn-brd-hover">Read More</a>
+		</div>
+		<iframe src="https://webchat.botframework.com/embed/newbot111-bot?s=cGel4Z6piVA.oiZieiPcF42e5UOb43xsH3WIcJjtXlUHUlOFsovY3cY" style="height: 502px; max-height: 502px;"></iframe>
+		<div class="col-md-6 overflow-h">
+			<img style="border-radius: 50px; margin-left: 30px;" src="img/1.jpg" alt="">
+		</div>
+		</div>
+		</div>
+		<!--=== End About Us ===-->
+
+
+
+		
+				<!-- Plans Start -->
+				
+
+		<!--=== Footer ===-->
+		
+		<div class="footer-v1">
+		<div class="footer">
+		<div class="container">
+		<div class="row">
+
+
+		<!-- About -->
+		<div class="col-md-3 md-margin-bottom-40">
+		<a href="index.html"><img id="logo-footer" class="footer-logo" src="img/unity_white.jpg" alt=""></a>
+		<p>Azure health bot will help you to lose weight faster and easier than you ever could by yourself. For the majority of people, exercise alone isn't enough to create long-lasting weight loss and better health. That's where your personal trainer comes in which is user azure bot.</p>
+		<p>Our mission is to deliver high quality, affordable healthcare services to the broader population in India.</p>
+		</div><!--/col-md-3-->
+		<!-- End About -->
+
+		<!-- Latest -->
+		<div class="col-md-3" style="margin-bottom: 40px;">
+	
+		
+		<ul class="list-unstyled latest-list">
+	
+	
+		
+		</ul>
+		</div>
+		</div><!--/col-md-3-->
+		<!-- End Latest -->
+
+		<!-- Link List -->
+		<div class="col-md-3" style="margin-bottom: 40px;">
+		
+		<ul class="list-unstyled link-list">
+		<li><a href="about.html">About us</a><i class="fa fa-angle-right"></i></li>
+		<li><a href="Contact.html">Contact us</a><i class="fa fa-angle-right"></i></li>
+		
+		</ul>
+		</div><!--/col-md-3-->
+		<!-- End Link List -->
+
+		<!-- Address -->
+		<div class="col-md-3 map-img" style="margin-bottom: 40px;">
+		<div class="headline"><h2>Contact Us</h2></div>
+		<address class="md-margin-bottom-40">
+		Weight Loss <br />
+		Ahmedabad, IN <br />
+		Phone: 0009981010 <br />
+		Email: weightloss@gmail.com 
+		</address>
+		</div><!--/col-md-3-->
+		<!-- End Address -->
+		</div>
+		</div>
+		</div><!--/footer-->
+
+		<div class="copyright">
+		<div class="container">
+		<div class="row">
+		<div class="col-md-6">
+		<p>
+		2020 &copy; All Rights Reserved.
+		
+		</p>
+		</div>
+
+		<!-- Social Links -->
+		
+
+</body>
+</html>
+
